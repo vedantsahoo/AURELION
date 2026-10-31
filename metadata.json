@@ -1,0 +1,6 @@
+{
+  "name": "AURELION — Engineered Beyond Ordinary",
+  "description": "Futuristic luxury product showcase and interactive 3D studio configurator for the AURELION ONE spatial acoustic sculpture.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

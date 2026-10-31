@@ -1,0 +1,645 @@
+# MASTER PROMPT — LUXURY PRODUCT SHOWCASE
+## Expert Cinematic 3D Website | Futuristic Sci-Fi
+
+### 1. ROLE AND MISSION
+
+Act as an elite creative director, award-winning digital experience designer, senior React engineer, Three.js specialist, WebGL shader developer, and interaction designer.
+
+Build a complete, production-minded, highly immersive **Luxury Product Showcase** website with a futuristic sci-fi aesthetic. The website should feel like the launch experience of an ultra-premium product from the year 2035: cinematic, sophisticated, technically impressive, minimal, and emotionally engaging.
+
+Do not create an ordinary ecommerce template. Create a digital product experience that feels like entering a futuristic luxury showroom.
+
+The finished website must be a working application, not a static Figma mockup or a collection of decorative animations. Every navigation link, product selector, interactive object, button, modal, and primary action must work.
+
+**Primary objective:** Create a memorable, immersive product storytelling experience through cinematic 3D visuals, scroll-controlled animation, tactile cursor interactions, interactive shaders, smooth transitions, and functional product customization.
+
+### 2. CREATIVE DIRECTION
+
+**Concept:** LUXURY PRODUCT SHOWCASE  
+**Brand identity:** AURELION  
+**Hero product:** AURELION ONE — a fictional next-generation luxury audio device featuring precision-machined titanium, sculptural geometry, smoked glass, ceramic surfaces, and subtle luminous accents.
+
+Keep the product branding, price, product specifications, colors, and descriptive content centralized so they can be changed easily.
+
+**Visual keywords:**
+- Futuristic luxury
+- Cinematic science fiction
+- Premium industrial design
+- Obsidian black and gunmetal
+- Liquid chrome and smoked glass
+- Electric violet and restrained ice-blue highlights
+- Architectural lighting
+- Volumetric atmosphere
+- Immersive spatial storytelling
+- Minimal editorial typography
+- High-end product advertising
+
+**Color palette:**
+- Background: `#06070A`
+- Secondary background: `#0C0F15`
+- Surface: `#131721`
+- Primary text: `#F4F5F8`
+- Secondary text: `#979CAB`
+- Electric violet: `#8B5CF6`
+- Ice blue: `#9DEBFF`
+- Chrome highlight: `#DCE1EC`
+
+Use bright accents sparingly. Preserve large areas of darkness to create visual hierarchy and make the product the primary focal point.
+
+**Typography:** Use a modern geometric sans-serif for headings, a clean UI sans-serif for interface text, and a restrained monospaced typeface for technical labels, model numbers, specifications, and status indicators.
+
+Use oversized editorial headlines, carefully controlled letter spacing, fluid typography, generous whitespace, fine borders, and precise alignment.
+
+Avoid excessive neon, generic cyberpunk clutter, unnecessary glassmorphism cards, cartoon-style 3D objects, and repetitive animation effects.
+
+### 3. REQUIRED TECHNOLOGY STACK
+
+Build the application with:
+
+- React and Vite
+- JavaScript or TypeScript, preferably TypeScript for a maintainable implementation
+- Three.js for real-time 3D rendering
+- React Three Fiber for declarative 3D scenes
+- Drei for useful Three.js helpers and environment utilities
+- GSAP and ScrollTrigger for timeline animation and scroll-driven storytelling
+- Lenis for smooth scrolling, integrated correctly with GSAP and ScrollTrigger
+- React Router for functional page navigation and page transitions
+- CSS Modules or a well-organized global CSS architecture
+- Lucide React for consistent interface icons
+
+Use custom GLSL shaders where they materially enhance the visual experience.
+
+Use genuine 3D geometry, physically based materials, lighting, reflections, camera choreography, and procedural shaders wherever appropriate.
+
+Prefer a real product model in GLB or GLTF format when an appropriate, legally usable asset is available. If one is unavailable, create a convincing product from procedural geometry and custom materials. Never rely on a missing external model for the website to function.
+
+Do not claim to use a 3D model, library, API, or external service unless it has actually been implemented.
+
+### 4. WEBSITE ARCHITECTURE
+
+Create these routes:
+
+- `/` — immersive cinematic home
+- `/product` — detailed product experience and customization
+- `/technology` — materials, engineering, and technical storytelling
+- `/craftsmanship` — product construction and design philosophy
+- `/checkout` — functional demo cart review and checkout flow
+
+All routes must render correctly when opened directly or refreshed. Navigation should update the browser history and support the back and forward buttons.
+
+The site must work as one coherent branded experience, sharing the same design system, navigation, product configuration, and cart state.
+
+### 5. CINEMATIC HOMEPAGE
+
+#### Section A: Immersive intro loader
+
+Design an elegant loading sequence with:
+
+- AURELION brand mark
+- Minimal progress indicator
+- Technical loading labels
+- Fine animated lines
+- A subtle light sweep
+- Smooth reveal into the hero
+
+Show genuine loading progress when it is measurable. Otherwise, use a short, interruptible visual intro rather than displaying fabricated percentages.
+
+Do not let the loader block the website indefinitely. Implement a timeout, WebGL failure fallback, and reduced-motion alternative.
+
+The loader should only display on initial loading or when useful, not unnecessarily on every interaction.
+
+#### Section B: Full-screen 3D hero
+
+Build an immersive hero section with a real interactive 3D product at the center or slightly off-center.
+
+The product should appear suspended in a dark environment, illuminated by cinematic rim lights with subtle reflections, controlled bloom, and atmospheric depth.
+
+Use:
+- A perspective camera with carefully controlled framing
+- Physically based materials
+- Studio-style area lighting or suitable simulated studio lights
+- A dark environmental background
+- Procedural floating particles
+- A subtle volumetric or shader-based visual layer
+- A slow, elegant product rotation
+- Responsive camera positioning
+
+Hero headline:
+
+“ENGINEERED
+BEYOND
+ORDINARY.”
+
+Supporting copy:
+
+“Precision, reimagined. Experience the next dimension of luxury.”
+
+Primary CTA: `EXPLORE AURELION ONE`
+
+Secondary CTA: `DISCOVER THE TECHNOLOGY`
+
+Functional interactions:
+- Dragging or pointer movement subtly influences product orientation.
+- Scroll input begins a controlled product-story sequence.
+- Primary CTA navigates to the product experience.
+- Secondary CTA navigates to the technology route.
+- The product remains readable and visually prominent across screen sizes.
+- A visible scroll indicator guides the visitor into the story.
+
+Do not make pointer movement excessively sensitive. The product should feel weighty and luxurious.
+
+#### Section C: Product reveal
+
+As the user scrolls, animate the product through a choreographed sequence:
+
+1. Begin with a hero-scale product.
+2. Transition to a three-quarter perspective.
+3. Move into a macro view of its surfaces.
+4. Highlight selected material details.
+5. Reveal the product silhouette against a brighter lighting environment.
+6. Transition into the customization experience.
+
+Use GSAP ScrollTrigger to synchronize camera position, product rotation, material effects, text reveals, lighting, and section progress.
+
+Implement pinning only where it improves the story. Avoid excessive pinning that makes the site difficult to navigate on mobile.
+
+The animation must be smooth, reversible during scrolling, and resilient to viewport resizing.
+
+#### Section D: The materials experience
+
+Create three interactive material explorations:
+
+- Titanium
+- Smoked glass
+- Ceramic composite
+
+When the visitor selects a material:
+- Update the active state clearly.
+- Change the product material or a representative 3D surface.
+- Adjust roughness, metalness, color, and reflected light as appropriate.
+- Display a short material description.
+- Animate the material transition naturally.
+- Announce the selection accessibly.
+
+If the selected material affects a whole product preset, update the same shared product state everywhere that product is shown.
+
+Do not implement selectors that only change text while pretending to alter the 3D object.
+
+#### Section E: Product customization
+
+Create a premium product configurator with the following controls:
+
+- Three or more colorways
+- At least two material or finish options
+- A view-angle control or interactive drag rotation
+- A reset-view button
+- An animated selected-state indicator
+- A product summary
+- A clearly displayed price
+
+Make each option visibly and functionally update the rendered scene or the selected configuration.
+
+If the actual model cannot support every possible customization, implement the available options honestly using supported geometry, materials, and product presets.
+
+Persist the selected configuration while navigating between pages.
+
+Include touch-friendly controls and keyboard support.
+
+#### Section F: Technical specifications
+
+Present the product specifications with cinematic visual hierarchy:
+
+- Product model
+- Materials
+- Dimensions
+- Weight
+- Acoustic or performance specifications appropriate to the fictional device
+- Battery or power information where relevant
+- Compatibility
+
+Use clearly labeled, fictional concept specifications, not fabricated claims about a real product.
+
+Reveal technical specifications progressively using scroll animation, fine grid lines, animated markers, and restrained interface transitions.
+
+#### Section G: Final conversion section
+
+Create a cinematic closing scene with the product hero returning into view.
+
+Headline:
+
+“YOUR WORLD.
+IN PERFECT DETAIL.”
+
+Display the configured product summary and selected finish.
+
+Provide:
+- `CONFIGURE YOURS`
+- `ADD TO BAG`
+
+The buttons must operate on the real current product configuration.
+
+The page footer should contain working navigation, a contact link, brand information, and an unobtrusive copyright notice.
+
+### 6. ADVANCED 3D AND SHADER INTERACTIONS
+
+Implement a deliberate set of visual effects rather than adding effects without a purpose.
+
+#### A. Product interaction
+
+Implement:
+- Slow idle rotation
+- Pointer-based parallax
+- Drag-to-rotate
+- Smooth camera movement
+- Material switching
+- Reset camera
+- Responsive scene framing
+
+Use damping and interpolation to avoid abrupt jumps.
+
+#### B. Interactive shader system
+
+Create at least two meaningful shader-driven effects where feasible:
+
+**Effect 1: Cursor-reactive energy field**
+
+A custom GLSL shader creates a subtle energy field around the product. The pointer influences a localized ripple or distortion.
+
+The effect should have:
+- A defined interaction radius
+- Smooth falloff
+- Adjustable intensity
+- Subtle electric color transitions
+- A visually restrained result
+- A low-cost fallback on lower-end devices
+
+**Effect 2: Liquid chrome or holographic surface**
+
+Create a programmable surface effect for a secondary visual object, product halo, or material-preview panel.
+
+Use procedural gradients, Fresnel-style edge treatment, controlled distortion, and environment reflections where appropriate.
+
+The visual treatment should reinforce product quality rather than obscure the product.
+
+Shader requirements:
+- Keep shader uniforms synchronized with relevant React or animation state.
+- Avoid unnecessary React re-renders for every pointer event.
+- Clean up event listeners and GPU resources.
+- Handle shader compilation failures gracefully.
+- Avoid blocking critical UI while shader assets initialize.
+
+If a feature requires a dedicated shader implementation, write the actual GLSL shader and its integration instead of substituting a static CSS gradient while claiming it is a shader.
+
+#### C. Scroll-controlled 3D choreography
+
+Create a GSAP timeline that synchronizes:
+
+- Product rotation
+- Camera position and focal distance
+- Product scale
+- Background brightness
+- Accent lighting
+- Scroll progress
+- Section-specific text reveals
+
+Use stable ScrollTrigger refresh behavior after loading assets and resizing the viewport.
+
+Ensure the final scene position is correct when the visitor navigates directly to a route or returns using browser history.
+
+#### D. Particle system
+
+Add subtle floating particles or dust motes using an efficient GPU-friendly method.
+
+Avoid rendering huge numbers of individual React components.
+
+Keep particle movement restrained and stop or reduce work when the scene is not visible.
+
+### 7. CUSTOM CURSOR
+
+Create a premium desktop cursor system with:
+
+- A small central dot
+- A smoothly trailing outer ring
+- Magnetic interaction with selected controls
+- Hover expansion on buttons and interactive product objects
+- Contextual labels such as `EXPLORE`, `DRAG`, or `VIEW`
+- A subtle click response
+
+The cursor should communicate what an element does, not merely change shape randomly.
+
+Technical requirements:
+- Use pointer events and requestAnimationFrame or GSAP efficiently.
+- Keep the cursor independent of document layout.
+- Avoid causing layout shifts.
+- Disable the custom cursor on touch-first devices.
+- Respect reduced-motion preferences.
+- Preserve the native cursor when appropriate.
+- Keep all controls usable by keyboard and screen readers.
+- Ensure the custom cursor never blocks clicks or hover targets.
+
+### 8. MAGNETIC BUTTONS
+
+Create magnetic interactions for primary CTAs.
+
+On pointer movement, buttons should subtly track the cursor within a small bounded area. The internal icon can move slightly more than the text.
+
+On pointer exit, return to the original position with a natural spring-like easing curve.
+
+Use the effect sparingly on important CTAs rather than every text link.
+
+Provide:
+- A generous hit target
+- Visible hover state
+- Keyboard focus state
+- Active press state
+- Reduced-motion fallback
+- Normal behavior on touch devices
+
+The effect must not alter the clickable position or create jittering layout changes.
+
+### 9. SMOOTH SCROLLING
+
+Implement Lenis for smooth scrolling on supported desktop and mobile environments.
+
+Integrate Lenis with GSAP ScrollTrigger using a synchronized animation loop or the currently recommended integration pattern for the installed versions.
+
+Requirements:
+- Native anchor navigation remains functional.
+- ScrollTrigger updates stay synchronized.
+- Browser back and forward work correctly.
+- Scroll positions are handled sensibly during navigation.
+- Reduced-motion users receive appropriate native or minimally animated scrolling.
+- Keyboard scrolling continues to work.
+- Do not hijack scrolling in a way that prevents users from reaching content.
+
+Avoid installing multiple scroll-smoothing systems that conflict with each other.
+
+### 10. ROUTE TRANSITIONS
+
+Use React Router and a coordinated page-transition system.
+
+Build a branded transition between routes using a dark overlay, animated lines, restrained blur, or a moving light band.
+
+On navigation:
+1. Detect the intended destination.
+2. Run the exit transition.
+3. Navigate to the new route.
+4. Initialize or update that route's animations.
+5. Reveal the new page.
+6. Place focus appropriately and handle the destination scroll position.
+
+Support browser back and forward navigation.
+
+Prevent stale animations, duplicate transitions, and GSAP timelines from continuing after component unmount.
+
+The transition must not trap keyboard users or delay navigation indefinitely.
+
+When reduced motion is enabled, use a near-instant transition.
+
+### 11. PRODUCT CART AND FUNCTIONAL INTERACTIONS
+
+Implement functional frontend ecommerce behavior, even if no payment backend is connected.
+
+Product interaction requirements:
+- Selecting a finish updates the selected variant.
+- The price and summary reflect the current product state.
+- `ADD TO BAG` adds the selected variant to the cart.
+- The cart badge updates immediately.
+- Opening the cart shows the actual selected items.
+- Quantity can be increased or decreased.
+- Items can be removed.
+- The subtotal updates correctly.
+- An empty-cart state is provided.
+- The cart state persists across routes and can persist after refresh through local storage.
+- Buttons provide useful success or error feedback.
+- The checkout route summarizes the selected items and configuration.
+
+The demo checkout should clearly state when an actual payment service is not connected. Never claim to process real payments.
+
+Use a centralized product-state or cart-state implementation instead of duplicating product information across page components.
+
+All clickable visual elements must have a real result. Do not use placeholder `#` links for meaningful actions.
+
+### 12. MOTION DESIGN SYSTEM
+
+Define consistent timing and easing rules.
+
+Use:
+- Fast hover feedback for controls
+- Smooth interpolation for camera and product movements
+- Staggered text reveals
+- Carefully paced cinematic section transitions
+- Scroll-driven animations only where they serve the story
+- A small number of continuous 3D animations
+
+Avoid animating every element simultaneously.
+
+Animations should use transform and opacity when suitable, and avoid triggering unnecessary layout recalculations.
+
+Use GSAP context cleanup and appropriate React effect cleanup to prevent duplicate timelines and listeners.
+
+### 13. RESPONSIVE DESIGN
+
+Design and test the experience at the following widths:
+
+- 320–375 px: small mobile screens
+- 390–430 px: modern smartphones
+- 768 px: tablets
+- 1024 px: small laptops
+- 1440 px: standard desktop
+- 1920 px and above: large screens
+
+On mobile:
+- Reduce shader complexity where needed.
+- Use a carefully framed product view.
+- Replace hover-only actions with explicit touch controls.
+- Avoid overly long pinned sections.
+- Ensure CTA buttons fit without horizontal overflow.
+- Provide a mobile-friendly navigation menu.
+- Keep specifications readable.
+- Allow touch drag to rotate the product without interfering excessively with vertical page scrolling.
+- Use a simplified 3D scene if necessary.
+
+Never make a vital piece of information available only on hover.
+
+### 14. ACCESSIBILITY
+
+Follow practical WCAG 2.2 AA accessibility principles where applicable.
+
+Implement:
+- Semantic HTML landmarks and headings
+- Keyboard-accessible navigation
+- Visible focus states
+- Correct accessible names for icon-only buttons
+- Accessible labels for selects, sliders, and form controls
+- Appropriate ARIA attributes for interactive states
+- Contrast-conscious typography
+- Screen-reader announcements for product-selection and cart updates
+- Meaningful alternative text for informative images
+- Reduced-motion support using `prefers-reduced-motion`
+- A functional non-WebGL fallback
+- No essential information communicated exclusively through animation or color
+
+Do not force visitors to interact with a 3D scene to understand the product.
+
+### 15. PERFORMANCE AND TECHNICAL QUALITY
+
+Treat performance as a design requirement.
+
+Use:
+- Lazy loading for noncritical routes and 3D assets
+- Dynamic imports for expensive scenes when useful
+- Efficient materials and geometry
+- Instancing for repeated particles
+- Appropriate renderer pixel ratios
+- Texture compression or appropriately sized textures where supported
+- Proper GPU-resource disposal
+- IntersectionObserver or equivalent visibility-aware rendering
+- Adaptive effects for mobile and low-performance devices
+- An appropriate WebGL fallback
+- Responsive image handling
+- Route-level code splitting
+
+Avoid:
+- Unbounded particle counts
+- Excessive post-processing
+- Unnecessary React state updates every frame
+- Memory leaks from geometry, materials, textures, or event listeners
+- Competing animation loops
+- Unhandled asset failures
+- Layout shifts during loading
+
+Aim for a responsive, visually smooth experience on modern devices, but do not promise a fixed frame rate without testing real hardware.
+
+### 16. COMPONENT ARCHITECTURE
+
+Use a clean, maintainable project structure similar to:
+
+```text
+src/
+  app/
+    App.tsx
+    router.tsx
+  components/
+    layout/
+      Header.tsx
+      Footer.tsx
+      NavigationMenu.tsx
+      PageTransition.tsx
+    ui/
+      MagneticButton.tsx
+      CustomCursor.tsx
+      SectionLabel.tsx
+      LoadingScreen.tsx
+      CartDrawer.tsx
+    product/
+      ProductConfigurator.tsx
+      ProductSummary.tsx
+      ProductCard.tsx
+      FinishSelector.tsx
+      ProductSpecifications.tsx
+  scenes/
+    ProductScene.tsx
+    ProductModel.tsx
+    Environment.tsx
+    ParticleField.tsx
+    shaders/
+      energyField.glsl
+      liquidChrome.glsl
+  pages/
+    HomePage.tsx
+    ProductPage.tsx
+    TechnologyPage.tsx
+    CraftsmanshipPage.tsx
+    CheckoutPage.tsx
+  state/
+    ProductContext.tsx
+    CartContext.tsx
+  hooks/
+    useReducedMotion.ts
+    useMediaQuery.ts
+  styles/
+    tokens.css
+    global.css
+  main.tsx
+```
+
+Adapt this structure as needed, but keep 3D rendering, shared UI, global state, page routing, and animation logic organized separately.
+
+Create reusable components instead of copying the same code between routes.
+
+### 17. IMPLEMENTATION WORKFLOW
+
+Work through the following stages:
+
+**Stage 1 — Foundation**
+- Initialize the React application.
+- Install compatible dependencies.
+- Configure routing and the design tokens.
+- Build the page layouts and responsive navigation.
+
+**Stage 2 — Core visuals**
+- Implement the 3D product scene.
+- Add procedural or supplied product geometry.
+- Establish lighting, materials, camera behavior, and fallback rendering.
+
+**Stage 3 — Animation**
+- Integrate Lenis and GSAP ScrollTrigger.
+- Build the hero reveal and scroll choreography.
+- Implement route transitions and section reveals.
+- Clean up all animations correctly.
+
+**Stage 4 — Interaction**
+- Implement custom cursor and magnetic buttons.
+- Build product configurator, shader interactions, and camera controls.
+- Implement cart state, quantity changes, and checkout summary.
+
+**Stage 5 — Reliability**
+- Test all navigation paths and deep links.
+- Test customization, cart calculations, and persistence.
+- Test touch input, keyboard navigation, and reduced-motion settings.
+- Verify the fallback experience when WebGL or assets fail.
+- Fix console errors, TypeScript errors, and production build errors.
+
+### 18. DEFINITION OF DONE
+
+The final result must satisfy all of the following:
+
+- The React application starts successfully.
+- Production compilation succeeds.
+- Every requested route loads and refreshes correctly.
+- The hero contains a functioning interactive 3D product or an explicitly implemented procedural alternative.
+- Scroll animation is driven by GSAP ScrollTrigger.
+- Smooth scrolling works without breaking navigation or accessibility.
+- The custom cursor works on supported desktop devices.
+- Magnetic buttons are bounded and interactive.
+- Shader effects actually respond to interaction.
+- Page transitions function for click navigation and browser history.
+- Product options visibly change product state.
+- Cart operations and totals work correctly.
+- Layout adapts to small and large screens.
+- Reduced-motion and WebGL fallback behavior work.
+- No important button is decorative or inert.
+- No fake payment or unsupported functionality is presented as real.
+- No placeholder content, broken image, missing model, or uncaught runtime error blocks the intended experience.
+
+### 19. FINAL INSTRUCTIONS
+
+Begin building the actual website immediately.
+
+Do not stop at a concept explanation, static screenshot, style guide, or generic sample component.
+
+Prioritize a cohesive cinematic hero and a working product configuration experience first. Then complete the other routes and refinements.
+
+Use realistic visual assets when available and procedural 3D alternatives where necessary. If a requested dependency or feature is unavailable in the environment, implement the closest honest, functional alternative without pretending the original feature exists.
+
+When finished, provide:
+1. The complete working application.
+2. The file and component structure.
+3. The commands to install, run, and build the application.
+4. A concise description of the implemented interactions.
+5. Any external assets, API keys, backend services, or deployment steps still required.
+
+**The desired outcome:** A futuristic luxury product experience that combines a premium industrial-design aesthetic with real 3D interaction, cinematic motion, working product customization, functional navigation, accessible controls, and production-minded engineering.
+
+Build the experience, not just the appearance.

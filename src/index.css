@@ -1,0 +1,69 @@
+@import "tailwindcss";
+@import "./styles/tokens.css";
+
+@layer base {
+  html {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    scroll-behavior: auto;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.01em;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  .font-mono-tech {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #06070A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E2433;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8B5CF6;
+}
+
+/* Focus states for WCAG 2.2 AA keyboard navigation */
+:focus-visible {
+  outline: 2px solid #9DEBFF;
+  outline-offset: 3px;
+}
+
+/* Architectural fine grid background */
+.bg-architectural-grid {
+  background-size: 64px 64px;
+  background-image: 
+    linear-gradient(to right, rgba(220, 225, 236, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(220, 225, 236, 0.035) 1px, transparent 1px);
+}
